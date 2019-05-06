@@ -8,13 +8,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/css/style.css">  <!-- pointe vers la racine du projet, i.e., webapp -->
-<title>Formulaire carg. aériennes</title>
+<title>Formulaire carg. routières</title>
 </head>
 
 <body>
-	<h2>Formulaire cargaisons aériennes</h2>
+	<h2>CRUD cargaisons routières</h2>
 	<div>
-		<f:form modelAttribute="airs" method="POST" action="saveAir">
+		<f:form modelAttribute="roads" method="POST" action="saveRoad">
 			<table>
 				<tr>
 					<td><f:hidden path="idCargaison"/> </td>
@@ -35,14 +35,14 @@
 					<td><f:errors path="destnation" cssClass="error"/></td>
 				</tr>
 				<tr>
-					<td>Numéro de vol :</td>
-					<td><f:input path="numVol" /></td>
-					<td><f:errors path="numVol" cssClass="error"/></td>
+					<td>Immatriculation :</td>
+					<td><f:input path="immatriculation" /></td>
+					<td><f:errors path="immatriculation" cssClass="error"/></td>
 				</tr>
 				<tr>
-					<td>Taxe (€) :</td>
-					<td><f:input path="taxe" /></td>
-					<td><f:errors path="taxe" cssClass="error"/></td>
+					<td>Péage (€) :</td>
+					<td><f:input path="peage" /></td>
+					<td><f:errors path="peage" cssClass="error"/></td>
 				</tr>
 				<tr>
 					<td><input type="submit" value="enregistrer" /></td>
@@ -58,21 +58,21 @@
 				<th>Nom cargaison</th>
 				<th>Départ</th>
 				<th>Destination</th>
-				<th>Numéro de vol</th>
-				<th>Taxe (€)</th>
+				<th>Immatriculation</th>
+				<th>Péage (€)</th>
 				<th>Modifier</th>
 				<th>Supprimer</th>
 			</tr>
-			<c:forEach var="a" items="${airs}">
+			<c:forEach var="r" items="${roads}">
 				<tr>
-					<td>${a.idCargaison}</td>
-					<td>${a.nomCargaison}</td>
-					<td>${a.depart}</td>
-					<td>${a.destination}</td>
-					<td>${a.numVol}</td>
-					<td>${a.taxe}</td>
-					<td><a href="editAdresse?id=${a.idCargaison}">éditer</a></td>
-					<td><a href="deleteAdresse?id=${a.idCargaison}">supprimer</a></td>
+					<td>${r.idCargaison}</td>
+					<td>${r.nomCargaison}</td>
+					<td>${r.depart}</td>
+					<td>${r.destination}</td>
+					<td>${r.immatriculation}</td>
+					<td>${r.peage}</td>
+					<td><a href="editAdresse?id=${r.idCargaison}">éditer</a></td>
+					<td><a href="deleteAdresse?id=${r.idCargaison}">supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>
