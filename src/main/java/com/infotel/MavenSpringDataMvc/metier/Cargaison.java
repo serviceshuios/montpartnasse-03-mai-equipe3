@@ -4,9 +4,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.springframework.stereotype.Component;
 
+	/**
+	 * Description de la classe abstraite Cargaison.
+	 * 
+	 * @author Benjamin Clarenc, Elsa Gouzhy
+	 * @version 0.1
+	 * @see Routiere, Aerienne
+	 * 
+	 * 
+	 */
 
 @Entity  // JPA
 @Component
@@ -18,6 +28,9 @@ public abstract class Cargaison {
 	protected String nomCargaison;
 	protected String depart;
 	protected String destination;
+	@ManyToOne
+	private SocieteTransport societe;
+	
 	public int getIdCargaison() {
 		return idCargaison;
 	}
@@ -41,6 +54,12 @@ public abstract class Cargaison {
 	}
 	public void setDestination(String destination) {
 		this.destination = destination;
+	}
+	public SocieteTransport getCompany() {
+		return societe;
+	}
+	public void setCompany(SocieteTransport company) {
+		this.societe = company;
 	}
 	
 	@Override
