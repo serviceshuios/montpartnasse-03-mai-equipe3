@@ -17,17 +17,17 @@
 					<td><f:hidden path="idSociete"/> </td>
 				</tr>
 				<tr>
-					<td>NOMSOCIETE :</td>
+					<td>Nom société :</td>
 					<td><f:input path="nomSociete" /></td>
 					<td><f:errors path="nomSociete" cssClass="error"/></td>
 				</tr>
 				<tr>
-					<td>SIRET:</td>
+					<td>SIRET :</td>
 					<td><f:input path="numSiret" /></td>
 					<td><f:errors path="numSiret" cssClass="error"/></td>
 				</tr>
 				<tr>
-					<td>DATECREATION:</td>
+					<td>Date de création :</td>
 					<td><f:input path="dateCreation" /></td>
 					<td><f:errors path="dateCreation" cssClass="error"/></td>
 				</tr>
@@ -41,11 +41,11 @@
 		<table class="table1">
 			<tr>
 				<th>ID</th>
-				<th>NOMSOCIETE</th>
-				<th>NUMSIRET</th>
-				<th>DATECREATION</th>
-				<th>SUPPRIMER</th>
+				<th>NOM SOCIETE</th>
+				<th>SIRET</th>
+				<th>DATE CREATION</th>
 				<th>MODIFIER</th>
+				<th>SUPPRIMER</th>
 			</tr>
 			<c:forEach var="c" items="${companies}">
 				<tr>
@@ -53,8 +53,8 @@
 					<td>${c.nomSociete}</td>
 					<td>${c.numSiret}</td>
 					<td>${c.dateCreation}</td>
-					<td><a href="deleteCompany?idSociete=${c.idSociete}">supprimer</a></td>
 					<td><a href="editCompany?idSociete=${c.idSociete}">editer</a></td>
+					<td><a href="deleteCompany?idSociete=${c.idSociete}">supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>
