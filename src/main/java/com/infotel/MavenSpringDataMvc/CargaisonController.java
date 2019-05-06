@@ -9,4 +9,6 @@ import com.infotel.MavenSpringDataMvc.service.Iservice;
 public class CargaisonController {
 	@Autowired
     private Iservice service;
+	
+	
 }

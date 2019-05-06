@@ -12,6 +12,13 @@ import javax.persistence.OneToMany;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+/**
+ * Description de la classe SocieteTransport.
+ * 
+ * @author Benjamin Clarenc, Elsa Gouzhy
+ * @version 0.1
+ */
+
 @Entity
 @Component
 @Scope(value="prototype")

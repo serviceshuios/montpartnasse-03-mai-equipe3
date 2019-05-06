@@ -47,7 +47,7 @@ public class RoutiereController {
     }
 
     @RequestMapping(value="/editRoad")
-    public String edit(@RequestParam int idCargaison, Model model) {
+    public String edit(@RequestParam int idCargaison, Model model) { // l'annotation impose 'idCargaison' dans la JSP (apres '?')
         model.addAttribute("road", service.getRoad(idCargaison));
         model.addAttribute("roads", service.findAllRoads());
         return "roads";

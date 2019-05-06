@@ -8,4 +8,5 @@ import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
 @Transactional
 public interface CompanyRepository extends JpaRepository<SocieteTransport,Integer>{
 
+	
 }

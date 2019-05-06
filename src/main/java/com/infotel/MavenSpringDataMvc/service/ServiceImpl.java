@@ -13,8 +13,8 @@ import com.infotel.MavenSpringDataMvc.metier.Routiere;
 import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
 
 /**
- * Implementation des methodes de la couches service
- * @author elsa gouzhy
+ * Implementation des methodes de la couche service
+ * @author Elsa Gouzhy et Benjamin Clarenc
  *
  */
 @Service
@@ -106,23 +106,7 @@ public class ServiceImpl implements Iservice {
 
 	@Override
 	public void linkCargToComp(int idCarg, int idComp) {
-		
+		// not implemented yet
 	}
 
 }
-
-//@Override
-//public void attribuerStagiairePromo(int idStagiaire, int idPromo) {
-//	try {
-//		con = GestionConnexion.getInstance();
-//		st = con.prepareStatement("UPDATE Stagiaire SET fpromo=? WHERE idStagiaire=?");
-//		st.setInt(1, idPromo);
-//		st.setInt(2, idStagiaire);
-//		st.executeUpdate();
-//		System.out.printf("\nstagiaire %d ajoute a la promo %d \n", idStagiaire, idPromo);
-//		
-//	} catch (Exception e) {
-//		System.out.println("error during attribution");
-//		e.printStackTrace();
-//	}
-

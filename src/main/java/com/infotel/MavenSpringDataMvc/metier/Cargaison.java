@@ -14,8 +14,6 @@ import org.springframework.stereotype.Component;
 	 * @author Benjamin Clarenc, Elsa Gouzhy
 	 * @version 0.1
 	 * @see Routiere, Aerienne
-	 * 
-	 * 
 	 */
 
 @Entity  // JPA

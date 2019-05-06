@@ -5,6 +5,14 @@ import javax.persistence.Entity;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+/**
+ * Description de la classe concrete Aerienne.
+ * 
+ * @author Benjamin Clarenc, Elsa Gouzhy
+ * @version 0.1
+ * @see Cargaison, Routiere
+ */
+
 @Entity
 @Component
 @Scope(value="prototype")

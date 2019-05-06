@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<h2>CRUD cargaisons routières</h2>
+	<h2>Formulaire cargaisons routières</h2>
 	<div>
 		<f:form modelAttribute="road" method="POST" action="saveRoad">
 			<table>
@@ -47,6 +47,25 @@
 				<tr>
 					<td><input type="submit" value="enregistrer" /></td>
 				</tr>
+				<tr>
+					<td>Société :</td>
+					<td><select name="societe.idSociete">
+						<optgroup>
+							<option value="0">(none)</option>
+							<c:if test="${not empty companies}">
+								<c:forEach items="${companies}" var="c">
+									<option value="${c.idSociete}"> <c:out value="[${c.idSociete}] ${c.nomSociete} (SIRET ${c.numSiret}) since ${c.dateCreation}"/> </option>
+								</c:forEach>
+							</c:if>
+						</optgroup>
+					</select></td>
+				</tr>
+<!-- 				<tr> -->
+<!-- 					<td>Si liste vide, entrez l'id de la société :</td> -->
+<%-- 					<td><f:input path="societe.idSociete" /></td> --%>
+<%-- 					<td><f:errors path="societe.idSociete" cssClass="error"/></td> --%>
+<!-- 				</tr> -->
+				
 			</table>
 		</f:form>
 	</div>
@@ -60,6 +79,7 @@
 				<th>Destination</th>
 				<th>Immatriculation</th>
 				<th>Péage (€)</th>
+<!-- 				<th>ID societe</th> -->
 				<th>Modifier</th>
 				<th>Supprimer</th>
 			</tr>
@@ -71,6 +91,7 @@
 					<td>${r.destination}</td>
 					<td>${r.immatriculation}</td>
 					<td>${r.peage}</td>
+<%--  					<td>${r.societe}</td> --%>
 					<td><a href="editRoad?idCargaison=${r.idCargaison}">éditer</a></td>
 					<td><a href="deleteRoad?idCargaison=${r.idCargaison}">supprimer</a></td>
 				</tr>

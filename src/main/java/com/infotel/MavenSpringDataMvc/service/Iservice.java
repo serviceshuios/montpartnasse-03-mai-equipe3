@@ -6,8 +6,11 @@ import com.infotel.MavenSpringDataMvc.metier.Routiere;
 import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
 
 
- /**@since 11  ce tag precise la version du JDK utilisé       */
-/**Ces methodes qui suivent permettent de faire le CRUD de chaque classe.Elles sont juste déclarées mais utilisées dans la jsp*/
+/** 
+ * Ces methodes qui suivent permettent de faire le CRUD des 3 classes concretes. On les déclare ici, on les instancie dans ServiceImmpl, on les appelle dans les JSP
+ * @since 11
+ * */
+
 public interface Iservice {
 
 	/** 
@@ -33,6 +36,11 @@ public interface Iservice {
 	public void editCompany(SocieteTransport s);
 	public List<SocieteTransport> findAllCompanies();
 
+	/**
+	 * Methode pour attribuer une societe a une cargaison, pas encore implementee
+	 * @param idCarg
+	 * @param idComp
+	 */
 	public void linkCargToComp(int idCarg, int idComp);
 	
 }
