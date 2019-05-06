@@ -14,7 +14,7 @@
 <body>
 	<h2>CRUD cargaisons routières</h2>
 	<div>
-		<f:form modelAttribute="roads" method="POST" action="saveRoad">
+		<f:form modelAttribute="road" method="POST" action="saveRoad">
 			<table>
 				<tr>
 					<td><f:hidden path="idCargaison"/> </td>
@@ -32,7 +32,7 @@
 				<tr>
 					<td>Destination :</td>
 					<td><f:input path="destination" /></td>
-					<td><f:errors path="destnation" cssClass="error"/></td>
+					<td><f:errors path="destination" cssClass="error"/></td>
 				</tr>
 				<tr>
 					<td>Immatriculation :</td>
@@ -71,8 +71,8 @@
 					<td>${r.destination}</td>
 					<td>${r.immatriculation}</td>
 					<td>${r.peage}</td>
-					<td><a href="editAdresse?id=${r.idCargaison}">éditer</a></td>
-					<td><a href="deleteAdresse?id=${r.idCargaison}">supprimer</a></td>
+					<td><a href="editRoad?idCargaison=${r.idCargaison}">éditer</a></td>
+					<td><a href="deleteRoad?idCargaison=${r.idCargaison}">supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -16,9 +16,9 @@ public class SocieteTransportController {
 	@Autowired
     private Iservice service;
 	
-	@RequestMapping(value = "/gerercompany", method = RequestMethod.GET)
+	@RequestMapping(value = "/manageCompany", method = RequestMethod.GET)
     public String lister(Model model) {
-        model.addAttribute("societeTransport", new SocieteTransport());
+        model.addAttribute("company", new SocieteTransport());
         model.addAttribute("companies", service.findAllCompanies());
         return "companies";
     }
@@ -27,28 +27,28 @@ public class SocieteTransportController {
     public String save(SocieteTransport soc,  Model model) {
         if (soc.getIdSociete() == 0) {
             service.addCompany(soc);
-            model.addAttribute("societeTransport", new SocieteTransport());
+            model.addAttribute("company", new SocieteTransport());
             model.addAttribute("companies", service.findAllCompanies());
             return "companies";
         } else {
             service.editCompany(soc);
-            model.addAttribute("societeTransport", new SocieteTransport());
+            model.addAttribute("company", new SocieteTransport());
             model.addAttribute("companies", service.findAllCompanies());
             return "companies";
-        }
-        
-}
+        }    
+    }
+    
     @RequestMapping(value = "/deleteCompany")
     public String delete(@RequestParam int idSociete, Model model) {
         service.deleteCompany(idSociete);
-        model.addAttribute("societeTransport", new SocieteTransport());
+        model.addAttribute("company", new SocieteTransport());
         model.addAttribute("companies", service.findAllCompanies());
         return "companies";
     }
 
     @RequestMapping(value = "/editCompany")
     public String edit(@RequestParam int idSociete, Model model) {
-        model.addAttribute("societeTransport", service.getCompany(idSociete));
+        model.addAttribute("company", service.getCompany(idSociete));
         model.addAttribute("companies", service.findAllCompanies());
         return "companies";
     }

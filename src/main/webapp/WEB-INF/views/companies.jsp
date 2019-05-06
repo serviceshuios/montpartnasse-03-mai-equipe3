@@ -14,7 +14,7 @@
 <body>
 	<h2>Formulaire sociétés</h2>
 	<div>
-		<f:form modelAttribute="societeTransport" method="POST" action="saveCompany">
+		<f:form modelAttribute="company" method="POST" action="saveCompany">
 			<table>
 				<tr>
 					<td><f:hidden path="idSociete"/> </td>

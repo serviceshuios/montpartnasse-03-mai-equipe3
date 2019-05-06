@@ -14,7 +14,7 @@
 <body>
 	<h2>Formulaire cargaisons aériennes</h2>
 	<div>
-		<f:form modelAttribute="airs" method="POST" action="saveAir">
+		<f:form modelAttribute="air" method="POST" action="saveAir">
 			<table>
 				<tr>
 					<td><f:hidden path="idCargaison"/> </td>
@@ -32,7 +32,7 @@
 				<tr>
 					<td>Destination :</td>
 					<td><f:input path="destination" /></td>
-					<td><f:errors path="destnation" cssClass="error"/></td>
+					<td><f:errors path="destination" cssClass="error"/></td>
 				</tr>
 				<tr>
 					<td>Numéro de vol :</td>
@@ -71,8 +71,8 @@
 					<td>${a.destination}</td>
 					<td>${a.numVol}</td>
 					<td>${a.taxe}</td>
-					<td><a href="editAdresse?id=${a.idCargaison}">éditer</a></td>
-					<td><a href="deleteAdresse?id=${a.idCargaison}">supprimer</a></td>
+					<td><a href="editAir?idCargaison=${a.idCargaison}">éditer</a></td>
+					<td><a href="deleteAir?idCargaison=${a.idCargaison}">supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>

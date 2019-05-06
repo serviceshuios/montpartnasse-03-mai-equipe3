@@ -29,6 +29,7 @@ public class Routiere extends Cargaison {
 	public void setPeage(double peage) {
 		this.peage = peage;
 	}
+	
 	@Override
 	public String toString() {
 		return "Routiere [immatriculation=" + immatriculation + ", peage=" + peage + ", nomCargaison=" + nomCargaison
