@@ -25,6 +25,8 @@ public interface Iservice {
 	public SocieteTransport getCompany(int id);
 	public void editCompany(SocieteTransport s);
 	public List<SocieteTransport> findAllCompanies();
+
+	public void linkCargToComp(int idCarg, int idComp);
 	
 }
 

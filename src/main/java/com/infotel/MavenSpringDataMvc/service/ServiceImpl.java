@@ -3,6 +3,7 @@ package com.infotel.MavenSpringDataMvc.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.infotel.MavenSpringDataMvc.dao.AirRepository;
 import com.infotel.MavenSpringDataMvc.dao.CompanyRepository;
@@ -11,6 +12,7 @@ import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
 import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
 
+@Service
 public class ServiceImpl implements Iservice {
 
 	@Autowired
@@ -96,4 +98,25 @@ public class ServiceImpl implements Iservice {
 		return companyRepository.findAll();
 	}
 
+	@Override
+	public void linkCargToComp(int idCarg, int idComp) {
+		
+	}
+
 }
+
+//@Override
+//public void attribuerStagiairePromo(int idStagiaire, int idPromo) {
+//	try {
+//		con = GestionConnexion.getInstance();
+//		st = con.prepareStatement("UPDATE Stagiaire SET fpromo=? WHERE idStagiaire=?");
+//		st.setInt(1, idPromo);
+//		st.setInt(2, idStagiaire);
+//		st.executeUpdate();
+//		System.out.printf("\nstagiaire %d ajoute a la promo %d \n", idStagiaire, idPromo);
+//		
+//	} catch (Exception e) {
+//		System.out.println("error during attribution");
+//		e.printStackTrace();
+//	}
+
