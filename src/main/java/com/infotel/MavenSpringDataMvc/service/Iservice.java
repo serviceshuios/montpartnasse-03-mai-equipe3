@@ -1,13 +1,20 @@
 package com.infotel.MavenSpringDataMvc.service;
 
 import java.util.List;
-
 import com.infotel.MavenSpringDataMvc.metier.Aerienne;
 import com.infotel.MavenSpringDataMvc.metier.Routiere;
 import com.infotel.MavenSpringDataMvc.metier.SocieteTransport;
- 
+
+
+ /**@since 11  ce tag precise la version du JDK utilisé       */
+/**Ces methodes qui suivent permettent de faire le CRUD de chaque classe.Elles sont juste déclarées mais utilisées dans la jsp*/
 public interface Iservice {
 
+	/** 
+	 * @param r la valeur à traiter
+	 * @return void cette methode ne retourne rien
+	 * public void addRoad(Routiere r);
+	 * */
 	public void addRoad(Routiere r);
 	public void deleteRoad(int id);
 	public Routiere getRoad(int id);
